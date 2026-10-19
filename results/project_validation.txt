@@ -1,0 +1,51 @@
+FINAL PROJECT VALIDATION
+========================
+
+Required project files present: PASS
+Total timing observations: 270 (PASS: expected 270)
+Thirty observations in every condition: PASS
+All recorded response times are positive finite values: PASS
+
+Condition counts:
+ table_size index_method observations
+      1e+04      B+ tree           30
+      1e+04         Hash           30
+      1e+04     No index           30
+      1e+05      B+ tree           30
+      1e+05         Hash           30
+      1e+05     No index           30
+      5e+05      B+ tree           30
+      5e+05         Hash           30
+      5e+05     No index           30
+
+Required-file check:
+                                     file exists
+                               00_Setup.R   TRUE
+                     01_collect_timings.R   TRUE
+                02_exploratory_analysis.R   TRUE
+                   03_distribution_fits.R   TRUE
+                    04_hypothesis_tests.R   TRUE
+                       05_final_summary.R   TRUE
+                                README.md   TRUE
+                               .gitignore   TRUE
+                      docs/methodology.md   TRUE
+       sql/01_create_benchmark_tables.sql   TRUE
+        sql/02_verify_execution_plans.sql   TRUE
+                     data/query_times.csv   TRUE
+                 data/run_information.txt   TRUE
+       results/descriptive_statistics.csv   TRUE
+     results/distribution_fit_results.csv   TRUE
+        results/paired_t_test_results.csv   TRUE
+                results/one_way_anova.txt   TRUE
+        results/two_way_anova_results.txt   TRUE
+           results/regression_results.txt   TRUE
+      results/chi_square_independence.txt   TRUE
+    results/final_mean_response_times.csv   TRUE
+        results/final_speedup_summary.csv   TRUE
+       results/conclusions_for_report.txt   TRUE
+ plots/final_response_time_comparison.png   TRUE
+
+Manual evidence already verified in pgAdmin:
+- No-index plan: Seq Scan
+- B+ tree plan: Index Scan using benchmark_10000_bplus_lookup_idx
+- Hash plan: Index Scan using benchmark_10000_hash_lookup_idx

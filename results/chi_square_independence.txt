@@ -1,0 +1,24 @@
+CHI-SQUARE TEST OF INDEPENDENCE
+
+Question: Is index method associated with response-time category?
+
+
+	Pearson's Chi-squared test
+
+data:  table(timings$index_method, timings$time_band)
+X-squared = 174.51, df = 6, p-value < 2.2e-16
+
+
+Expected frequencies:
+
+            1  2  3  4
+  No index 23 22 22 23
+  B+ tree  23 22 22 23
+  Hash     23 22 22 23
+
+Condition check:
+All expected frequencies are at least 5. The expected-frequency condition is satisfied.
+
+Important limitation:
+The timings are repeated measurements, so this chi-square result is exploratory.
+The paired t-tests are the main evidence for method comparisons.

@@ -1,0 +1,26 @@
+REGRESSION MODEL
+Outcome: log(response_time_ms)
+Predictors: log(table_size), index method, and interaction
+
+
+Call:
+lm(formula = log_time ~ log(table_size) * index_method, data = timings)
+
+Residuals:
+     Min       1Q   Median       3Q      Max
+-0.55830 -0.15759 -0.00669  0.15764  1.15665
+
+Coefficients:
+                                    Estimate Std. Error t value Pr(>|t|)
+(Intercept)                         -7.18964    0.19296  -37.26   <2e-16 ***
+log(table_size)                      0.85189    0.01693   50.31   <2e-16 ***
+index_methodB+ tree                  7.68044    0.27288   28.15   <2e-16 ***
+index_methodHash                     7.83939    0.27288   28.73   <2e-16 ***
+log(table_size):index_methodB+ tree -0.84658    0.02395  -35.35   <2e-16 ***
+log(table_size):index_methodHash    -0.86361    0.02395  -36.06   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.2579 on 264 degrees of freedom
+Multiple R-squared:  0.9561,	Adjusted R-squared:  0.9552
+F-statistic:  1149 on 5 and 264 DF,  p-value: < 2.2e-16

@@ -1,0 +1,22 @@
+TWO-WAY ANOVA ON LOG RESPONSE TIME
+
+                          Df Sum Sq Mean Sq F value Pr(>F)
+index_method               2 213.74  106.87  3071.2 <2e-16 ***
+size_factor                2  57.94   28.97   832.5 <2e-16 ***
+index_method:size_factor   4 118.92   29.73   854.3 <2e-16 ***
+Residuals                261   9.08    0.03
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual normality check (Shapiro-Wilk):
+
+	Shapiro-Wilk normality test
+
+data:  residuals(two_way_model)
+W = 0.85052, p-value = 1.845e-15
+
+
+Important note:
+ANOVA is applied to log(response time) because raw times are right-skewed.
+Repeated measurements and cache effects mean this is an experimental approximation,
+so conclusions should be supported by the paired tests as well.

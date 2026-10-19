@@ -1,0 +1,65 @@
+
+========================================
+ONE-WAY ANOVA: TABLE SIZE = 10000
+========================================
+             Df Sum Sq Mean Sq F value   Pr(>F)
+index_method  2  1.751  0.8756   33.99 1.24e-11 ***
+Residuals    87  2.241  0.0258
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Tukey multiple-comparison test:
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = log_time ~ index_method, data = size_data)
+
+$index_method
+                        diff         lwr        upr     p adj
+B+ tree-No index -0.30205505 -0.40087403 -0.2032361 0.0000000
+Hash-No index    -0.28935161 -0.38817059 -0.1905326 0.0000000
+Hash-B+ tree      0.01270344 -0.08611554  0.1115224 0.9495546
+
+
+========================================
+ONE-WAY ANOVA: TABLE SIZE = 1e+05
+========================================
+             Df Sum Sq Mean Sq F value Pr(>F)
+index_method  2  54.35  27.175   598.1 <2e-16 ***
+Residuals    87   3.95   0.045
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Tukey multiple-comparison test:
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = log_time ~ index_method, data = size_data)
+
+$index_method
+                       diff        lwr         upr     p adj
+B+ tree-No index -1.6161556 -1.7473919 -1.48491925 0.0000000
+Hash-No index    -1.6789925 -1.8102288 -1.54775614 0.0000000
+Hash-B+ tree     -0.0628369 -0.1940732  0.06839943 0.4912244
+
+
+========================================
+ONE-WAY ANOVA: TABLE SIZE = 5e+05
+========================================
+             Df Sum Sq Mean Sq F value Pr(>F)
+index_method  2 276.56  138.28    4166 <2e-16 ***
+Residuals    87   2.89    0.03
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Tukey multiple-comparison test:
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = log_time ~ index_method, data = size_data)
+
+$index_method
+                        diff        lwr         upr     p adj
+B+ tree-No index -3.69365932 -3.8058307 -3.58148791 0.0000000
+Hash-No index    -3.74300969 -3.8551811 -3.63083828 0.0000000
+Hash-B+ tree     -0.04935037 -0.1615218  0.06282104 0.5481647

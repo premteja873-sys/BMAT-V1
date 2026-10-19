@@ -1,0 +1,15 @@
+# Private connection details
+.Renviron
+*password*
+*credential*
+
+# R session files
+.Rhistory
+.RData
+.Ruserdata
+
+# RStudio temporary files
+.Rproj.user/
+
+# Local dashboard session values
+.shiny_bookmarks/

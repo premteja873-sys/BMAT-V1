@@ -1,0 +1,10 @@
+"table_size","index_method","mean_response_time_ms"
+10000,"No index",2.318
+1e+05,"No index",8.995
+5e+05,"No index",71.074
+10000,"B+ tree",1.724
+1e+05,"B+ tree",1.865
+5e+05,"B+ tree",1.767
+10000,"Hash",1.758
+1e+05,"Hash",1.69
+5e+05,"Hash",1.67
