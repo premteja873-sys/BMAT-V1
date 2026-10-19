@@ -29,6 +29,7 @@ Required-file check:
                                 README.md   TRUE
                                .gitignore   TRUE
                       docs/methodology.md   TRUE
+                     docs/FRIEND_SETUP.md   TRUE
        sql/01_create_benchmark_tables.sql   TRUE
         sql/02_verify_execution_plans.sql   TRUE
                      data/query_times.csv   TRUE

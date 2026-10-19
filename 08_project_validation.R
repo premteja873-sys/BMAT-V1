@@ -14,6 +14,7 @@ required_files <- c(
   "README.md",
   ".gitignore",
   "docs/methodology.md",
+  "docs/FRIEND_SETUP.md",
   "sql/01_create_benchmark_tables.sql",
   "sql/02_verify_execution_plans.sql",
   "data/query_times.csv",

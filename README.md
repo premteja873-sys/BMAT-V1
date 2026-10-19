@@ -66,6 +66,10 @@ creates a new set of timings, which can differ slightly with system activity.
 - `docs/` - project methodology documentation
 - `sql/` - PostgreSQL table-creation and verification SQL
 
+For setup on another computer, see `docs/FRIEND_SETUP.md`. A live PostgreSQL
+connection is not uploaded; the included SQL recreates the same nine-table
+database using the other user's own local PostgreSQL password.
+
 ## Simple presentation evidence
 
 For a short demonstration, show:
